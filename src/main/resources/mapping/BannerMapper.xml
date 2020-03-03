@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sb.spring_boot_demo.mapper.BannerMapper">
+
+    <resultMap id="resultMap" type="com.sb.spring_boot_demo.bean4db.Banner">
+        <result column="banner_id" jdbcType="BIGINT" property="bannerId" />
+        <result column="banner_name" jdbcType="VARCHAR" property="bannerName" />
+        <result column="banner_picture" jdbcType="VARCHAR" property="bannerPicture" />
+        <result column="is_online" jdbcType="INTEGER" property="isOnline" />
+        <result column="channel_id" jdbcType="VARCHAR" property="channelId" />
+    </resultMap>
+
+    <select id="GetWithBean" parameterType="java.lang.Long" resultMap="resultMap">
+        select * from banner where banner_id = #{bannerId}
+    </select>
+
+    <select id="GetWithMap" parameterType="java.lang.Long" resultType="java.util.HashMap">
+        select * from banner where banner_id = #{bannerId}
+    </select>
+
+
+</mapper>
