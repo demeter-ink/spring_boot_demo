@@ -1,3 +1,10 @@
+#### read me
+
+此工程用于对比javaweb 工程和go web工程性能
+
+文章连接： https://blog.csdn.net/xiao44_java/article/details/104566959
+
+
 #### 建表语句
 
 ```sql
